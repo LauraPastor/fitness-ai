@@ -1,8 +1,18 @@
+"use client"
 import React from 'react'
+import { SignedIn, SignedOut } from '@clerk/clerk-react'
+import { SignOutButton, SignInButton } from '@clerk/nextjs'
 
 const HomePage = () => {
   return (
-    <div> Home</div>
+    <div> Home
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <SignOutButton />
+      </SignedIn>
+    </div>
   )
 }
 
