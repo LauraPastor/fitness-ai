@@ -3,7 +3,7 @@ export const USER_PROGRAMS = [
     id: 1,
     first_name: "Sarah",
     profilePic:
-      "https://ui-avatars.com/api/?background=random&color=fff&size=150&rounded=true",
+      "https://ui-avatars.com/api/?name=FA&background=18CEF2&color=fff&size=150&rounded=true",
     fitness_goal: "Weight Loss",
     height: "5'6\"",
     weight: "165 lbs",
@@ -54,7 +54,7 @@ export const USER_PROGRAMS = [
     id: 2,
     first_name: "Michael",
     profilePic:
-      "https://ui-avatars.com/api/?background=random&color=fff&size=150&rounded=true",
+      "https://ui-avatars.com/api/?name=FA&background=18CEF2&color=fff&size=150&rounded=true",
     fitness_goal: "Muscle Gain",
     height: "5'10\"",
     weight: "170 lbs",
@@ -106,7 +106,7 @@ export const USER_PROGRAMS = [
     id: 3,
     first_name: "Elena",
     profilePic:
-      "https://ui-avatars.com/api/?background=random&color=fff&size=150&rounded=true",
+      "https://ui-avatars.com/api/?name=FA&background=18CEF2&color=fff&size=150&rounded=true",
     fitness_goal: "General Fitness",
     height: "5'4\"",
     weight: "130 lbs",
