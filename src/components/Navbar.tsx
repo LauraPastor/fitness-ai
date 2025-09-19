@@ -15,7 +15,7 @@ const Navbar = () => {
                         <ZapIcon className='w-4 h-4 text-primary' />
                     </div>
                     <span className='text-xl font-bold font-mono' >Fitness
-                        <span className='text-primary'>Assistant</span>
+                        <span className='text-primary'>Ai</span>
                     </span>
                 </Link>
                 <nav className='flex items-center gap-5'>
