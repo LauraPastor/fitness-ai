@@ -87,14 +87,21 @@ const GenerateProgramPage = () => {
             console.log("AI stopped Speaking");
             setIsSpeaking(false);
         };
-        const handleMessage = (message: any) => {
+        type VapiMessage = {
+            type: string;
+            transcriptType?: string;
+            transcript?: string;
+            role?: string;
+        };
+
+        const handleMessage = (message: VapiMessage) => {
             if (message.type === "transcript" && message.transcriptType === "final") {
                 const newMessage = { content: message.transcript, role: message.role };
                 setMessages((prev) => [...prev, newMessage]);
             }
         };
 
-        const handleError = (error: any) => {
+        const handleError = (error: unknown) => {
             console.log("Vapi Error", error);
             setConnecting(false);
             setCallActive(false);
