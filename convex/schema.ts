@@ -9,7 +9,7 @@ export default defineSchema({
     image: v.optional(v.string()),
   }).index("by_clerkId", ["clerkId"]),
   plans: defineTable({
-    userId: v.id("users"),
+    user_id: v.string(),
     name: v.string(),
     workoutPlan: v.object({
       schedule: v.array(v.string()),
@@ -40,6 +40,6 @@ export default defineSchema({
     }),
     isActive: v.boolean(),
   })
-    .index("by_userId", ["userId"])
+    .index("by_user_id", ["user_id"])
     .index("by_active", ["isActive"]),
 });
