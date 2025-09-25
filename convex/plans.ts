@@ -3,7 +3,7 @@ import { v } from "convex/values";
 
 export const createPlan = mutation({
   args: {
-    user_id: v.string(),
+    userId: v.string(),
     name: v.string(),
     workoutPlan: v.object({
       schedule: v.array(v.string()),
@@ -34,7 +34,7 @@ export const createPlan = mutation({
   handler: async (ctx, args) => {
     const activePlans = await ctx.db
       .query("plans")
-      .withIndex("by_user_id", (q) => q.eq("user_id", args.user_id))
+      .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
       .filter((q) => q.eq(q.field("isActive"), true))
       .collect();
 
@@ -49,11 +49,11 @@ export const createPlan = mutation({
 });
 
 export const getUserPlans = query({
-  args: { user_id: v.string() },
+  args: { userId: v.string() },
   handler: async (ctx, args) => {
     const plans = await ctx.db
       .query("plans")
-      .withIndex("by_user_id", (q) => q.eq("user_id", args.user_id))
+      .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
       .order("desc")
       .collect();
 

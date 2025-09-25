@@ -242,7 +242,7 @@ http.route({
       dietPlan = validateDietPlan(dietPlan);
 
       const planId = await ctx.runMutation(api.plans.createPlan, {
-        user_id: user_id,
+        userId: user_id,
         dietPlan,
         isActive: true,
         workoutPlan,
